@@ -11,7 +11,7 @@
 
 #define MS_K1 &mkp MB1
 #define MS_K2 &mkp MB2
-#define MS_K3 &mkp MB3n
+#define MS_K3 &mkp MB3
 #define MS_D &mmv MOVE_DOWN
 #define MS_L &mmv MOVE_LEFT
 #define MS_R &mmv MOVE_RIGHT
