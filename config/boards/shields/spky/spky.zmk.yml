@@ -2,7 +2,7 @@ file_format: "1"
 id: spky
 name: SPKY
 type: shield
-url: https://github.com/hypan599/zmk-xpandi.git
+url: https://github.com/hypan599/zmk-xpandi
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
