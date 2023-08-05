@@ -1,17 +1,17 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-if SHIELD_XSP_LEFT
+if SHIELD_SPKY_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "XSPv1"
+    default "SPKYv1"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_XSP_LEFT || SHIELD_SOFLE_RIGHT
+if SHIELD_SPKY_LEFT || SHIELD_SPKY_RIGHT
 
 config ZMK_SPLIT
     default y

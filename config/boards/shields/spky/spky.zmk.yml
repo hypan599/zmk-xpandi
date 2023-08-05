@@ -1,8 +1,8 @@
 file_format: "1"
-id: sofle
-name: Sofle
+id: spky
+name: SPKY
 type: shield
-url: https://github.com/josefadamcik/SofleKeyboard
+url: https://github.com/hypan599/zmk-xpandi.git
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +10,5 @@ features:
   - display
   - encoder
 siblings:
-  - sofle_left
-  - sofle_right
+  - spky_left
+  - spky_right
