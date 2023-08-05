@@ -14,4 +14,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: spky_left, spky_right, nice_view
+    shield: spky_left, nice_view
+  
+  - board: nice_nano_v2
+    shield: spky_right, nice_view
