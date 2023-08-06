@@ -54,60 +54,36 @@
 
         keymap {
                 compatible = "zmk,keymap";
-
-
-// |  `        | 1      | 2      | 3      | 4      | 5      |                                               | 6      | 7      | 8         | 9      | 0         | =      |
-// | Tab       | Q      | W      | E      | R      | T      |                                               | Y      | U      | I         | O      | P         | -      |
-// | Esc       | A      | S      | D      | F      | G      | Mute   |                          |  Hyper(Y) | H      | J      | K         | L      | ;         | '      |
-// | Ctrl      | Z      | X      | C      | V      | B      |                                               | N      | M      | ,         | .      | /         | Ctrl   |
-//                                        | CMD    |        | Option    | none |      | to L1   | Option    |        | CMD    |
-//                                                          | Space     | Shift|      | Enter   | Bksp      |
                 default_layer {
                         bindings = <
-   &kp GRAVE    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                                      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0          &kp EQUAL
-   &kp TAB      &kp Q       &kp W       &kp E       &kp R       &kp T                                                       &kp Y       &kp U       &kp I       &kp O       &kp P           &kp MINUS
-   &kp ESC      &mt MEH A   &mt LCTRL S &mt LALT D  &mt LCMD F  &mt HYP G   &kp K_MUTE                          &kp HypY    &mt HYP H   &mt RCMD J  &mt RALT K  &mt RCTRL L &mt MEH SEMI    &kp SQT
-   &kp LCTRL    &kp Z       &kp X       &kp C       &kp V       &kp B                                                       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH        &kp RCTRL
-                                                    &kp LCMD                &kp LALT    &none       MO_TOG(1)   &lt 2 RALT              &kp RCMD
-                                                                            &kp SPACE   &kp LSHFT   &kp ENTER   &kp BSPC
+&kp GRAVE    &kp N1         &kp N2          &kp N3      &kp N4          &kp N5                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp EQUAL
+&kp TAB      &kp Q          &kp W           &kp E       &kp R           &kp T                                       &kp Y           &kp U           &kp I           &kp O           &kp P           &kp MINUS
+&kp ESC      &mt MEH A      &mt LCTRL S     &mt LALT D  &mt LCMD F      &mt HYP G       &kp K_MUTE  &kp HypY        &mt HYP H       &mt RCMD J      &mt RALT K      &mt RCTRL L     &mt MEH SEMI    &kp SQT
+&kp LCTRL    &kp Z          &kp X           &kp C       &kp V           &kp B                                       &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RCTRL
+                                                        &kp LCMD        &kp LALT        &none       MO_TOG(1)       &lt 2 RALT      &kp RCMD
+                                                                        &kp SPACE       &kp LSHFT   &kp ENTER       &kp BSPC
                         >;
                         sensor-bindings = <&inc_dec_kp WH_U WH_D &inc_dec_kp WH_L WH_R>;
                 };
-
-
-// | trans     | trans  |trans   | trans  | trans  | trans  |                                               | trans  | trans  | trans     | trans  | trans     | trans     |
-// | Tab       | `      | 7      | 8      | 9      | 0      |                                               | mmv L  | mmv D  | mmv U     | mmv R  | Undo ⌘Z   | Redo ⇧⌘Z  |
-// | [         | ]      | 4      | 5      | 6      | =      | Mute   |                          |Hyper(Y)   | Left   | Down   | Up        | Right  | Copy ⌘C   | Paste ⌘V  |
-// | Ctrl      | \      | 1      | 2      | 3      | -      |                                               | mkp L  | mkp R  | mkp M     | Macro  | Repeat    | Ctrl      |
-//                                        | CMD    |        | Option    | to L0|      | None    | Option    |        | CMD    |
-//                                                          | Space     | Shift|      | Enter   | Bksp      |
-
                 l1_layer {
                         bindings = <
-   &trans       &trans          &trans          &trans      &trans      &trans                                                          &trans      &trans      &trans  &trans      &trans          &trans
-   &trans       &kp GRAVE       &kp N7          &kp N8      &kp N9      &kp N0                                                          MS_L        MS_D        MS_U    MS_R        &kp LG(Z)       &kp LS(LG(Z))
-   &kp LBKT     &mt MEH RBKT    &mt LCTRL N4    &mt LALT N5 &mt LCMD N6 &mt HYP EQUAL   &kp K_MUTE                         &kp HypY     &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT   &kp LG(C)       &kp LG(V)
-   &trans       &kp NUBS        &kp N1          &kp N2      &kp N3      &kp MINUS                                                       MS_K1       MS_K2       MS_K3   &mwpin      &key_repeat     &trans
-                                                            &trans                      &trans     &to 0       &none       &trans                   &trans
-                                                                                        &trans     &trans      &trans      &trans
+&trans       &trans          &trans         &trans      &trans          &trans                                      &trans          &trans          &trans          &trans          &trans          &trans
+&trans       &kp GRAVE       &kp N7         &kp N8      &kp N9          &kp N0                                      MS_L            MS_D            MS_U            MS_R            &kp LG(Z)       &kp LS(LG(Z))
+&kp LBKT     &mt MEH RBKT    &mt LCTRL N4   &mt LALT N5 &mt LCMD N6     &mt HYP EQUAL   &kp K_MUTE  &kp HypY        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp LG(C)       &kp LG(V)
+&trans       &kp NUBS        &kp N1         &kp N2      &kp N3          &kp MINUS                                   MS_K1           MS_K2           MS_K3           &mwpin          &key_repeat     &trans
+                                                        &trans          &trans          &to 0       &none           &trans          &trans
+                                                                        &trans          &trans      &trans          &trans
                         >;
                         sensor-bindings = <&inc_dec_kp WH_U WH_D &inc_dec_kp WH_L WH_R>;
                 };
-
-// |  `        | F16    | F17    | F18    | F19    | F20    |                                               | 6      | 7      | 8         | 9      | 0         | BT_CLR |
-// | Tab       | F15    | F7     | F8     | F9     | F10    |                                               | BT1    | BT2    | BT3       | BT4    | BT5       | -      |
-// | Esc       | F14    | F4     | F5     | F6     | F11    | Mute   |                          |  ⌘⌃Q(Lock)| H      | J      | K         | L      | ;         | '      |
-// | Ctrl      | F13    | F1     | F2     | F3     | F12    |                                               | N      | M      | ,         | .      | /         | Ctrl   |
-//                                        | CMD    |        | Option    | none |      | to L1   | Option    |        | CMD    |
-//                                                          | Space     | Shift|      | Enter   | Bksp      |
                 fn_layer {
                         bindings = <
-   &trans     &kp F16   &kp F17   &kp F18  &kp F19  &kp F20                                            &trans         &trans         &trans         &trans         &trans         &bt BT_CLR
-   &trans     &kp F15   &kp F7    &kp F8   &kp F9   &kp F10                                            &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans
-   &trans     &kp F14   &kp F4    &kp F5   &kp F6   &kp F11  &kp K_MUTE                 &kp LC(LG(Q))  &trans         &trans         &trans         &trans         &trans         &trans
-   &trans     &kp F13   &kp F1    &kp F2   &kp F3   &kp F12                                            &trans         &trans         &trans         &trans         &trans         &trans
-                                           &trans            &trans     &none   &none   &trans                        &trans
-                                                             &trans     &trans  &trans  &trans
+&trans      &kp F16         &kp F17         &kp F18     &kp F19         &kp F20                                     &trans          &trans          &trans         &trans           &trans          &bt BT_CLR
+&trans      &kp F15         &kp F7          &kp F8      &kp F9          &kp F10                                     &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4    &trans
+&trans      &kp F14         &kp F4          &kp F5      &kp F6          &kp F11         &kp K_MUTE  &kp LC(LG(Q))   &trans          &trans          &trans         &trans           &trans          &trans
+&trans      &kp F13         &kp F1          &kp F2      &kp F3          &kp F12                                     &trans          &trans          &trans         &trans           &trans          &trans
+                                                        &trans          &trans          &none       &none           &trans          &trans
+                                                                        &trans          &trans      &trans          &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
