@@ -9,66 +9,47 @@
 #define HYPER_Y LS(LC(LA(LG(Y))))
 // #define MO_TOG(layer) &mo_tog layer layer
 
-#define MS_K1 &mkp MB1
-#define MS_K2 &mkp MB2
-#define MS_K3 &mkp MB3
-#define MS_D &mmv MOVE_DOWN
-#define MS_L &mmv MOVE_LEFT
-#define MS_R &mmv MOVE_RIGHT
-#define MS_U &mmv MOVE_UP
-#define WH_D &mwh SCROLL_DOWN
-#define WH_L &mwh SCROLL_LEFT
-#define WH_R &mwh SCROLL_RIGHT
-#define WH_U &mwh SCROLL_UP
-
 &key_repeat {
     usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
-// | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |             | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |
-// | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |             | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |
-// | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 | SW30 | SW30 | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |
-// | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |             | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 |
-//                             | SW25 | SW26 | SW27 | SW27 | SW26 | SW25 |
-//                                      SW28 | SW29 | SW29 | SW28 |
-
 / {
-    behaviors {
-        mo_tog: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mo_tog";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&tog>;
+        behaviors {
+            mo_tog: behavior_mo_tog {
+                compatible = "zmk,behavior-hold-tap";
+                label = "mo_tog";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&mo>, <&tog>;
+            };
+            
+            inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
+                compatible = "zmk,behavior-sensor-rotate-var";
+                label = "ENC_MOUSE_WHEEL";
+                #sensor-binding-cells = <2>;
+                 bindings = <&mwh>, <&mwh>;
+            };
+            
+            inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
+                compatible = "zmk,behavior-sensor-rotate-var";
+                label = "ENC_MOUSE_MOVEMENT";
+                #sensor-binding-cells = <2>;
+                 bindings = <&mmv>, <&mmv>;
+            };
         };
         
-        inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_MOUSE_WHEEL";
-            #sensor-binding-cells = <2>;
-             bindings = <&mwh>, <&mwh>;
+        macros {
+            ZMK_MACRO(mwpin,
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    =   <&kp N2 &kp N0 &kp N2 &kp N0>
+                    ,   <&kp N0 &kp N3 &kp N0 &kp N2>
+                    ,   <&kp ENTER>
+                    ;
+            )
         };
-        
-        inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_MOUSE_MOVEMENT";
-            #sensor-binding-cells = <2>;
-             bindings = <&mmv>, <&mmv>;
-        };
-    };
-    
-    macros {
-        ZMK_MACRO(mwpin,
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                =   <&kp N2 &kp N0 &kp N2 &kp N0>
-                ,   <&kp N0 &kp N3 &kp N0 &kp N2>
-                ,   <&kp ENTER>
-                ;
-        )
-    };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -76,7 +57,7 @@
                         bindings = <
 &kp GRAVE    &kp N1         &kp N2          &kp N3      &kp N4          &kp N5                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp EQUAL
 &kp TAB      &kp Q          &kp W           &kp E       &kp R           &kp T                                       &kp Y           &kp U           &kp I           &kp O           &kp P           &kp MINUS
-&kp ESC      &mt MEH A      &mt LCTRL S     &mt LALT D  &mt LCMD F      &mt HYP G       &kp K_MUTE  &kp HYPER_Y     &mt HYP H       &mt RCMD J      &mt RALT K      &mt RCTRL L     &mt MEH SEMI    &kp SQT
+&kp ESC      &mt MEH A      &mt LCTRL S     &mt LALT D  &mt LCMD F      &mt HYP G       &kp K_MUTE  &none           &mt HYP H       &mt RCMD J      &mt RALT K      &mt RCTRL L     &mt MEH SEMI    &kp SQT
 &kp LCTRL    &kp Z          &kp X           &kp C       &kp V           &kp B                                       &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RCTRL
                                                         &kp LCMD        &kp LALT        &none       &mo_tog 1 1     &lt 2 RALT      &kp RCMD
                                                                         &kp SPACE       &kp LSHFT   &kp ENTER       &kp BSPC
@@ -87,9 +68,9 @@
                 l1_layer {
                         bindings = <
 &trans       &trans          &trans         &trans      &trans          &trans                                      &trans          &trans          &trans          &trans          &trans          &trans
-&trans       &kp GRAVE       &kp N7         &kp N8      &kp N9          &kp N0                                      MS_L            MS_D            MS_U            MS_R            &kp LG(Z)       &kp LS(LG(Z))
-&kp LBKT     &mt MEH RBKT    &mt LCTRL N4   &mt LALT N5 &mt LCMD N6     &mt HYP EQUAL   &kp K_MUTE  &kp HYPER_Y     &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp LG(C)       &kp LG(V)
-&trans       &kp NUBS        &kp N1         &kp N2      &kp N3          &kp MINUS                                   MS_K1           MS_K2           MS_K3           &mwpin          &key_repeat     &trans
+&trans       &kp GRAVE       &kp N7         &kp N8      &kp N9          &kp N0                                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &kp LG(Z)       &kp LS(LG(Z))
+&kp LBKT     &mt MEH RBKT    &mt LCTRL N4   &mt LALT N5 &mt LCMD N6     &mt HYP EQUAL   &kp K_MUTE  &none           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp LG(C)       &kp LG(V)
+&trans       &kp NUBS        &kp N1         &kp N2      &kp N3          &kp MINUS                                   &mkp MB1        &mkp MB2        &mkp MB3        &mwpin          &key_repeat     &trans
                                                         &trans          &trans          &to 0       &none           &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
