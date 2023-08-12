@@ -13,10 +13,6 @@
     usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
-//nice_view_spi: &spi0 {
-//  cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-//};
-
 / {
         behaviors {
             mo_tog: behavior_mo_tog {
@@ -28,19 +24,19 @@
                 bindings = <&mo>, <&tog>;
             };
             
-            inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
-                compatible = "zmk,behavior-sensor-rotate-var";
-                label = "ENC_MOUSE_WHEEL";
-                #sensor-binding-cells = <2>;
-                 bindings = <&mwh>, <&mwh>;
-            };
-            
-            inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
-                compatible = "zmk,behavior-sensor-rotate-var";
-                label = "ENC_MOUSE_MOVEMENT";
-                #sensor-binding-cells = <2>;
-                 bindings = <&mmv>, <&mmv>;
-            };
+//            inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
+//                compatible = "zmk,behavior-sensor-rotate-var";
+//                label = "ENC_MOUSE_WHEEL";
+//                #sensor-binding-cells = <2>;
+//                bindings = <&mwh>, <&mwh>;
+//            };
+//
+//            inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
+//                compatible = "zmk,behavior-sensor-rotate-var";
+//                label = "ENC_MOUSE_MOVEMENT";
+//                #sensor-binding-cells = <2>;
+//                bindings = <&mmv>, <&mmv>;
+//            };
 
 
             hm: homerow_mods {
@@ -77,7 +73,7 @@
                                                         &kp LCMD        &kp LALT        &none       &mo_tog 1 1     &lt 2 RALT      &kp RCMD
                                                                         &kp SPACE       &kp LSHFT   &kp ENTER       &kp BSPC
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
                 };
                 
                 l1_layer {
