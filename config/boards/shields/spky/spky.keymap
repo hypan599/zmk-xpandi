@@ -43,8 +43,8 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick-tap-ms = <0>;
+                tapping-term-ms = <500>;
+                quick-tap-ms = <125>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
@@ -68,10 +68,10 @@
                         bindings = <
 &kp GRAVE    &kp N1        &kp N2          &kp N3       &kp N4          &kp N5                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp EQUAL
 &kp TAB      &kp Q         &kp W           &kp E        &kp R           &kp T                                       &kp Y           &kp U           &kp I           &kp O           &kp P           &kp MINUS
-&kp ESC      &kp A         &kp S           &kp D        &kp F           &kp G           &kp K_MUTE  &kp C_PP        &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp SQT
+&kp ESC      &hm MEH A     &hm LCTRL S     &hm LALT D   &hm LCMD F      &hm HYP G       &kp K_MUTE  &kp C_PP        &hm HYP H       &hm RCMD J      &hm RALT K      &hm RCTRL L     &hm MEH SEMI    &kp SQT
 &kp LCTRL    &kp Z         &kp X           &kp C        &kp V           &kp B                                       &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RCTRL
-                                                        &kp LCMD        &kp LALT        &none       &mo_tog 1 1     &lt 2 RALT      &kp RCMD
-                                                                        &kp SPACE       &kp LSHFT   &kp ENTER       &kp BSPC
+                                                        &kp LCMD        &kp SPACE       &kp ENTER   &mo_tog 1 1     &kp BSPC        &lt 2 RSHIFT
+                                                                        &kp LCTRL       &kp DEL     &kp TAB         &kp RALT
                         >;
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
                 };
@@ -79,10 +79,10 @@
                 l1_layer {
                         bindings = <
 &trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &trans          &trans          &trans          &trans          &trans
-&trans       &kp GRAVE      &kp N7          &kp N8      &kp N9          &kp N0                                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &kp LG(Z)       &kp LS(LG(Z))
-&kp LBKT     &kp RBKT       &kp N4          &kp N5      &kp N6          &kp EQUAL       &kp K_MUTE  &kp C_PP        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp LG(C)       &kp LG(V)
+&trans       &kp GRAVE      &kp N7          &kp N8      &kp N9          &kp N0                                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans          &trans
+&kp LBKT     &hm MEH RBKT   &hm LCTRL N4    &hm LALT N5 &hm LCMD N6     &hm HYP EQUAL   &kp K_MUTE  &kp C_PP        &hm HYP GRAVE   &hm RCMD LEFT   &hm RALT DOWN   &hm RCTRL UP    &hm MEH RIGHT   &trans
 &trans       &kp NUBS       &kp N1          &kp N2      &kp N3          &kp MINUS                                   &mkp MB1        &mkp MB2        &mkp MB3        &mwpin          &key_repeat     &trans
-                                                        &trans          &trans          &to 0       &none           &trans          &trans
+                                                        &trans          &trans          &trans      &tog 1          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
