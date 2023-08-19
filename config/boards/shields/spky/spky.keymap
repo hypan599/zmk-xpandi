@@ -80,8 +80,8 @@
                         bindings = <
 &trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &trans          &trans          &trans          &trans          &trans
 &trans       &kp GRAVE      &kp N7          &kp N8      &kp N9          &kp N0                                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans          &trans
-&kp LBKT     &hm MEH RBKT   &hm LCTRL N4    &hm LALT N5 &hm LCMD N6     &hm HYP EQUAL   &kp K_MUTE  &kp C_PP        &hm HYP GRAVE   &hm RCMD LEFT   &hm RALT DOWN   &hm RCTRL UP    &hm MEH RIGHT   &trans
-&trans       &kp NUBS       &kp N1          &kp N2      &kp N3          &kp MINUS                                   &mkp MB1        &mkp MB2        &mkp MB3        &mwpin          &key_repeat     &trans
+&kp LBKT     &hm MEH RBKT   &hm LCTRL N4    &hm LALT N5 &hm LCMD N6     &hm HYP EQUAL   &kp K_MUTE  &kp C_PP        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans          &trans
+&trans       &kp NUBS       &kp N1          &kp N2      &kp N3          &kp MINUS                                   &mkp LCLK       &mkp RCLK       &mkp MCLK       &mwpin          &key_repeat     &trans
                                                         &trans          &trans          &trans      &tog 1          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
