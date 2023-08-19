@@ -13,6 +13,19 @@
     usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <1500>;
+    delay-ms = <0>;
+};
+
+&mwh {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <5000>;
+    delay-ms = <0>;
+};
+
+
 / {
         behaviors {
             mo_tog: behavior_mo_tog {
