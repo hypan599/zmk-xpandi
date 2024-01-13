@@ -5,7 +5,7 @@
 config ZMK_USB
 	default y
 
-if SHIELD_SKPYV2
+if SHIELD_SPKYV2
 
 config ZMK_KEYBOARD_NAME
     default "SPKYv2"

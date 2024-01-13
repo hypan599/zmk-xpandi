@@ -1,5 +1,5 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-config SHIELD_SKPYV2
+config SHIELD_SPKYV2
     def_bool $(shields_list_contains,spkyv2)

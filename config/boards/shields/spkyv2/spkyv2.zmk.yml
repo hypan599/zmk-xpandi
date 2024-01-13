@@ -1,6 +1,6 @@
 file_format: "1"
 id: spkyv2
-name: SKPYV2
+name: SPKYV2
 type: shield
 url: https://github.com/hypan599/zmk-xpandi
 requires: [pro_micro]
