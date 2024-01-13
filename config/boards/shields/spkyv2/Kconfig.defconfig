@@ -1,7 +1,7 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-# todo: what does this do?
+
 config ZMK_USB
 	default y
 
