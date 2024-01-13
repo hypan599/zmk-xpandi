@@ -1,0 +1,9 @@
+file_format: "1"
+id: spkyv2
+name: SPKYv2
+type: shield
+url: https://github.com/hypan599/zmk-xpandi
+# is this correct?
+requires: [pro_micro]
+features:
+  - keys
