@@ -7,7 +7,6 @@
 #define HYP LS(LC(LA(LCMD)))
 #define MEH LS(LC(LALT))
 #define HYPER_Y LS(LC(LA(LG(Y))))
-#define MO_TOG(layer) &mo_tog layer layer
 
 #define DEFAULT 0
 #define LMDFR    1
@@ -21,32 +20,7 @@
     usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
-&mmv {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <1500>;
-    delay-ms = <0>;
-};
-
-&mwh {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <5000>;
-    delay-ms = <0>;
-};
-
-
 / {
-        behaviors {
-            mo_tog: behavior_mo_tog {
-                compatible = "zmk,behavior-hold-tap";
-                label = "mo_tog";
-                #binding-cells = <2>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <200>;
-                bindings = <&mo>, <&tog>;
-            };
-
-        };
-
         macros {
             ZMK_MACRO(mwpin,
                 wait-ms = <40>;
@@ -55,7 +29,7 @@
                     =   <&kp N2 &kp N0 &kp N2 &kp N0>
                     ,   <&kp N0 &kp N3 &kp N0 &kp N2>
                     ,   <&kp ENTER>
-                    ;r
+                    ;
             )
         };
 
