@@ -10,10 +10,10 @@
 #define DEFAULT 0
 #define LMDFR    1
 #define RMDFR    2
-#define NAV     3
-#define MOUSE   4
-#define NUM     5
-#define FN      6
+#define NAVL     3
+#define MOUSEL   4
+#define NUML     5
+#define FNL      6
 
 / {
         keymap {
@@ -24,8 +24,10 @@
 &kp TAB      &kp Q         &kp W           &kp F        &kp P           &kp B                                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp ENTER
 &kp ESC      &kp A         &kp R           &kp S        &kp T           &kp G           &kp K_MUTE  &kp K_MUTE      &kp M           &kp N           &kp E           &kp I           &kp O           &kp SQT
 &kp LSHIFT   &kp Z         &kp X           &kp C        &kp D           &kp V                                       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
-                                                        &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR       &kp RSHFT
-                                                                        &lt NAV SPACE   &kp LCMD    &lt FN ENTER    &lt NUM BSPC
+                                                        // &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR       &kp RSHFT
+                                                                        // &lt NAVL SPACE  &kp LCMD    &lt FNL ENTER   &lt NUML BSPC
+                                                        &kp LCMD        &kp LALT        &none       &none           &none      &kp RCMD
+                                                                        &kp SPACE       &kp LSHFT   &kp ENTER       &kp BSPC
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
