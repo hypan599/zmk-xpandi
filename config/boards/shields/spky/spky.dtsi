@@ -47,20 +47,20 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                   RC(3,6) RC(3,7
             ;
     };
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-        status = "disabled";
-    };
+//     left_encoder: encoder_left {
+//         compatible = "alps,ec11";
+//         label = "LEFT_ENCODER";
+//         a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//         b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//         steps = <80>;
+//     };
 
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-    };
-};
+//     sensors {
+//         compatible = "zmk,keymap-sensors";
+//         sensors = <&left_encoder>;
+//         triggers-per-rotation = <10>;
+//     };
+// };
 
 &pro_micro_i2c {
     status = "okay";
@@ -79,5 +79,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                   RC(3,6) RC(3,7
         com-invdir;
         com-sequential;
         prechargep = <0x22>;
+//        inversion-on;
     };
 };
