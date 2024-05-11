@@ -27,7 +27,6 @@
                                                         &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR       &kp RSHFT
                                                                         &lt NAVL SPACE  &kp LCMD    &lt FNL ENTER   &lt NUML BSPC
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 modifier_left_layer {
@@ -39,7 +38,6 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 modifier_right_layer {
@@ -51,7 +49,6 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 nav_layer {
@@ -63,7 +60,6 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 mouse_layer {
@@ -75,7 +71,6 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 num_layer {
@@ -87,7 +82,6 @@
                                                         &kp N0          &trans          &trans      &trans          &trans          &trans
                                                                         &kp MINUS       &kp EQUAL   &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 fn_layer {
@@ -99,7 +93,6 @@
                                                         &kp K_APP       &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
         };
 };
