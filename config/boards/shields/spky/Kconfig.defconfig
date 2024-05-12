@@ -29,7 +29,7 @@ if SHIELD_SPKY_LEFT || SHIELD_SPKY_RIGHT
         config SSD1306
             default y
         config SSD1306_REVERSE_MODE
-        default y
+            default y
 
     endif # ZMK_DISPLAY
 
