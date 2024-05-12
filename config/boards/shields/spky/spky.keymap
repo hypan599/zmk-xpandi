@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define HYP LS(LC(LA(LCMD)))
 #define MEH LS(LC(LALT))
@@ -11,28 +10,12 @@
 #define DEFAULT 0
 #define LMDFR    1
 #define RMDFR    2
-#define NAV     3
-#define MOUSE   4
-#define NUM     5
-#define FN      6
-
-&key_repeat {
-    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
-};
+#define NAVL     3
+#define MOUSEL   4
+#define NUML     5
+#define FNL      6
 
 / {
-        macros {
-            ZMK_MACRO(mwpin,
-                wait-ms = <40>;
-                tap-ms = <40>;
-                bindings
-                    =   <&kp N2 &kp N0 &kp N2 &kp N0>
-                    ,   <&kp N0 &kp N3 &kp N0 &kp N2>
-                    ,   <&kp ENTER>
-                    ;
-            )
-        };
-
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
@@ -41,8 +24,8 @@
 &kp TAB      &kp Q         &kp W           &kp F        &kp P           &kp B                                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp ENTER
 &kp ESC      &kp A         &kp R           &kp S        &kp T           &kp G           &kp K_MUTE  &kp K_MUTE      &kp M           &kp N           &kp E           &kp I           &kp O           &kp SQT
 &kp LSHIFT   &kp Z         &kp X           &kp C        &kp D           &kp V                                       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
-                                                        &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR    &kp RSHFT
-                                                                        &lt NAV SPACE   &kp TAB     &lt FN ENTER    &lt NUM BSPC
+                                                        &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR       &kp RSHFT
+                                                                        &lt NAVL SPACE  &kp LCMD    &lt FNL ENTER   &lt NUML BSPC
                         >;
                 };
 
