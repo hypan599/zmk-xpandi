@@ -19,33 +19,37 @@ endif
 
 if SHIELD_SPKY_LEFT || SHIELD_SPKY_RIGHT
 
-    config ZMK_SPLIT
-        default y
+config ZMK_SPLIT
+    default y
 
-    if ZMK_DISPLAY
+if ZMK_DISPLAY
 
-        config I2C
-            default y
-        config SSD1306
-            default y
-        config SSD1306_REVERSE_MODE
-            default y
+config I2C
+    default y
 
-    endif # ZMK_DISPLAY
+config SSD1306
+    default y
 
-    if LVGL
+config SSD1306_REVERSE_MODE
+    default y
 
-        config LV_Z_VDB_SIZE
-            default 64
-        config LV_Z_DPI
-            default 148
-        config LV_Z_BITS_PER_PIXEL
-            default 1
+endif # ZMK_DISPLAY
 
-        choice LV_COLOR_DEPTH
-            default LV_COLOR_DEPTH_1
-        endchoice
+if LVGL
 
-    endif # LVGL
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_Z_DPI
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+endif # LVGL
 
 endif
