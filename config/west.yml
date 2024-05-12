@@ -17,7 +17,7 @@ manifest:
 #      import: app/west.yml
     - name: zmk
       remote: urob
-      revision: main
+      revision: main-3.0
       import: app/west.yml
   self:
     path: config
