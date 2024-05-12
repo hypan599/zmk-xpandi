@@ -16,8 +16,8 @@ manifest:
 #      revision: mouse-ftc
 #      import: app/west.yml
     - name: zmk
-      remote: hypan599
-      revision: 20230904
+      remote: urob
+      revision: main
       import: app/west.yml
   self:
     path: config
