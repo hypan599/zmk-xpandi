@@ -2,20 +2,63 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define HYP LS(LC(LA(LCMD)))
 #define MEH LS(LC(LALT))
 #define HYPER_Y LS(LC(LA(LG(Y))))
+#define MO_TOG(layer) &mo_tog layer layer
 
 #define DEFAULT 0
 #define LMDFR    1
 #define RMDFR    2
-#define NAVL     3
-#define MOUSEL   4
-#define NUML     5
-#define FNL      6
+#define NAV     3
+#define MOUSE   4
+#define NUM     5
+#define FN      6
+
+&key_repeat {
+    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+};
+
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <1500>;
+    delay-ms = <0>;
+};
+
+&mwh {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <5000>;
+    delay-ms = <0>;
+};
+
 
 / {
+        behaviors {
+            mo_tog: behavior_mo_tog {
+                compatible = "zmk,behavior-hold-tap";
+                label = "mo_tog";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&mo>, <&tog>;
+            };
+
+        };
+
+        macros {
+            ZMK_MACRO(mwpin,
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    =   <&kp N2 &kp N0 &kp N2 &kp N0>
+                    ,   <&kp N0 &kp N3 &kp N0 &kp N2>
+                    ,   <&kp ENTER>
+                    ;r
+            )
+        };
+
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
@@ -24,9 +67,10 @@
 &kp TAB      &kp Q         &kp W           &kp F        &kp P           &kp B                                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp ENTER
 &kp ESC      &kp A         &kp R           &kp S        &kp T           &kp G           &kp K_MUTE  &kp K_MUTE      &kp M           &kp N           &kp E           &kp I           &kp O           &kp SQT
 &kp LSHIFT   &kp Z         &kp X           &kp C        &kp D           &kp V                                       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
-                                                        &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR       &kp RSHFT
-                                                                        &lt NAVL SPACE  &kp LCMD    &lt FNL ENTER   &lt NUML BSPC
+                                                        &kp ESC         &mo LMDFR       &mo LMDFR   &mo RMDFR       &mo RMDFR    &kp RSHFT
+                                                                        &lt NAV SPACE   &kp TAB     &lt ENTER FN    &lt NUM BSPC
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 modifier_left_layer {
@@ -38,6 +82,7 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 modifier_right_layer {
@@ -49,6 +94,7 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 nav_layer {
@@ -56,10 +102,11 @@
 &trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &trans          &trans          &trans          &trans          &trans
 &trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &kp RG(V)       &kp RG(C)       &kp RG(X)       &kp RG(Z)       &trans
 &trans       &kp LCTRL      &kp LALT        &kp LGUI    &kp LSHFT       &trans          &trans      &trans          &trans          &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-&trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END         &trans
+&trans       &trans         &trans          &trans      &trans          &trans                                      &trans          &kp HOME        &kp PG_UP       &kp PG_DOWN     &kp END         &trans
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 mouse_layer {
@@ -71,6 +118,7 @@
                                                         &trans          &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 num_layer {
@@ -82,6 +130,7 @@
                                                         &kp N0          &trans          &trans      &trans          &trans          &trans
                                                                         &kp MINUS       &kp EQUAL   &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
 
                 fn_layer {
@@ -93,6 +142,7 @@
                                                         &kp K_APP       &trans          &trans      &trans          &trans          &trans
                                                                         &trans          &trans      &trans          &trans
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
         };
 };
