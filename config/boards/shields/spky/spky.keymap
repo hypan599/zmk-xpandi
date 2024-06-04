@@ -6,7 +6,7 @@
 #define MEH LS(LC(LALT))
 #define HYPER_Y LS(LC(LA(LG(Y))))
 
-#define DEFAULT 0
+#define DEFAULT  0
 #define LMDFR    1
 #define RMDFR    2
 #define NAVL     3

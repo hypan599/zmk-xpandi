@@ -7,7 +7,7 @@ requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
-  - display
+#  - display
 siblings:
   - spky_left
   - spky_right
