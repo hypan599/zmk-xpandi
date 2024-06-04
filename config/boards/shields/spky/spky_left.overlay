@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020 Ryan Cross
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "spky.dtsi"
 
 &kscan0 {
@@ -16,7 +10,3 @@
         , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         ;
 };
-
-// &left_encoder {
-//     status = "okay";
-// };
