@@ -4,7 +4,7 @@ name: SPKY
 type: shield
 url: https://github.com/hypan599/zmk-xpandi
 requires: [pro_micro]
-exposes: [i2c_oled]
+#exposes: [i2c_oled]
 features:
   - keys
 #  - display
