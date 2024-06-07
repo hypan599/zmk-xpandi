@@ -11,13 +11,13 @@ manifest:
     - name: hypan599
       url-base: https://github.com/hypan599
   projects:
+#    - name: zmk
+#      remote: zmkfirmware
+#      revision: main
+#      import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
+      remote: urob
       revision: main
       import: app/west.yml
-#    - name: zmk
-#      remote: urob
-#      revision: main-3.0
-#      import: app/west.yml
   self:
     path: config
