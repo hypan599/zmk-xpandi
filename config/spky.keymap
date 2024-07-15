@@ -24,11 +24,25 @@
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
 
-        tapSpc_holdMo: tapSpc_holdMo {
+        td_spc: td_spc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPSPC_HOLDMO";
+            label = "TD_SPC";
             #binding-cells = <0>;
             bindings = <&lt 3 SPACE>, <&kp SPACE>;
+        };
+
+        capsWminus: capsWminus {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPSWMINUS";
+            #binding-cells = <0>;
+            continue-list = <MINUS UNDERSCORE>;
+        };
+
+        td_bksp: td_bksp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_BKSP";
+            #binding-cells = <0>;
+            bindings = <&lt 5 BACKSPACE>, <&kp BACKSPACE>;
         };
     };
 
@@ -37,12 +51,12 @@
 
         default_layer {
             bindings = <
-&kp GRAVE     &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                   &kp N6           &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB       &kp Q   &kp W   &kp F   &kp P     &kp B                                    &kp J            &kp L      &kp U      &kp Y    &kp SEMI  &kp MINUS
-&kp ESC       &kp A   &kp R   &kp S   &kp T     &kp G        &kp LG(LC(Q))  &kp K_MUTE   &kp M            &kp N      &kp E      &kp I    &kp O     &kp SQT
-&td_sft_caps  &kp Z   &kp X   &kp C   &kp D     &kp V                                    &kp K            &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
-                                      &kp LCMD  &none        &mo 1          &mo 2        &none            &kp RCTRL
-                                                &lt 3 SPACE  &lt 4 ENTER    &lt 6 ENTER  &lt 5 BACKSPACE
+&kp GRAVE     &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                               &kp N6    &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB       &kp Q   &kp W   &kp F   &kp P     &kp B                                &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp MINUS
+&kp ESC       &kp A   &kp R   &kp S   &kp T     &kp G    &kp LG(LC(Q))  &kp K_MUTE   &kp M     &kp N      &kp E      &kp I    &kp O     &kp SQT
+&td_sft_caps  &kp Z   &kp X   &kp C   &kp D     &kp V                                &kp K     &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                                      &kp LCMD  &none    &mo 1          &mo 2        &none     &kp RCTRL
+                                                &td_spc  &lt 4 ENTER    &lt 6 ENTER  &td_bksp
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
