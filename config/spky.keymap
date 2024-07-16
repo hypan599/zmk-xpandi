@@ -55,7 +55,7 @@
 &kp TAB       &kp Q   &kp W   &kp F   &kp P     &kp B                                &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp MINUS
 &kp ESC       &kp A   &kp R   &kp S   &kp T     &kp G    &kp LG(LC(Q))  &kp K_MUTE   &kp M     &kp N      &kp E      &kp I    &kp O     &kp SQT
 &td_sft_caps  &kp Z   &kp X   &kp C   &kp D     &kp V                                &kp K     &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
-                                      &kp LCMD  &none    &mo 1          &mo 2        &none     &kp RCTRL
+                                      &kp LCMD  &td_spc  &lt 4 ENTER    &lt 6 ENTER  &td_bksp  &kp RCTRL
                                                 &td_spc  &lt 4 ENTER    &lt 6 ENTER  &td_bksp
             >;
 
