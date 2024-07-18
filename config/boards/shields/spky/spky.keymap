@@ -8,12 +8,10 @@
 #define MEH LS(LC(LALT))
 #define HYPER_Y LS(LC(LA(LG(Y))))
 #define DEFAULT  0
-#define LMDFR    1
-#define RMDFR    2
-#define NAVL     3
-#define MOUSEL   4
-#define NUML     5
-#define FNL      6
+#define NAVL     1
+#define MOUSEL   2
+#define NUML     3
+#define FNL      4
 
 / {
     keymap {
@@ -27,32 +25,6 @@
 &kp LSHIFT  &kp Z   &kp X   &kp C   &kp D     &kp V                                 &kp K            &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
                                     &kp LCMD  &none        &mo 1       &mo 2        &none            &kp RCTRL
                                               &lt 3 SPACE  &lt 4 TAB   &lt 6 ENTER  &lt 5 BACKSPACE
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        modifier_left_layer {
-            bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans     &trans  &trans  &trans  &trans  &trans
-                                                  &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        modifier_right_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans    &trans    &trans     &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
