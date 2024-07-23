@@ -36,7 +36,7 @@
 &trans  &trans     &trans     &trans     &trans     &trans                     &kp INSERT  &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
 &trans  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &trans     &trans  &trans  &trans      &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(V)                  &trans      &kp RG(V)  &kp RG(C)      &kp RG(X)    &kp RG(Z)  &trans
-                                         &trans     &trans     &trans  &trans  &trans      &trans
+                                         &kp ENTER  &trans     &trans  &trans  &trans      &trans
                                                     &trans     &trans  &trans  &trans
             >;
 
