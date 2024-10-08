@@ -45,7 +45,7 @@
 &trans  &trans     &trans     &trans     &trans     &trans                        &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
 &trans  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &trans     &trans  &trans     &trans         &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(V)                     &trans         &kp RG(V)  &kp RG(C)      &kp RG(X)    &kp RG(Z)  &trans
-                                         &kp ENTER  &trans     &trans  &trans     &trans         &trans
+                                         &trans     &trans     &trans  &trans     &trans         &trans
                                                     &trans     &trans  &kp ENTER  &kp BACKSPACE
             >;
 
@@ -67,12 +67,12 @@
 
         num_layer {
             bindings = <
-&trans  &trans            &trans  &trans  &trans   &trans                                &trans         &trans     &trans    &trans    &trans     &trans
-&trans  &kp BSLH          &kp N7  &kp N8  &kp N9   &kp N0                                &trans         &trans     &trans    &trans    &trans     &trans
-&trans  &kp MINUS         &kp N4  &kp N5  &kp N6   &kp EQUAL          &trans     &trans  &kp BACKSPACE  &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
-&trans  &kp LEFT_BRACKET  &kp N1  &kp N2  &kp N3   &kp RIGHT_BRACKET                     &trans         &kp ENTER  &trans    &trans    &trans     &trans
-                                          &kp DOT  &kp SPACE          &trans     &trans  &trans         &trans
-                                                   &kp SPACE          &kp ENTER  &trans  &trans
+&trans  &trans            &trans  &trans  &trans   &trans                            &trans         &trans     &trans    &trans    &trans     &trans
+&trans  &kp MINUS         &kp N7  &kp N8  &kp N9   &kp EQUAL                         &trans         &trans     &trans    &trans    &trans     &trans
+&trans  &kp LEFT_BRACKET  &kp N4  &kp N5  &kp N6   &kp RBKT       &trans     &trans  &kp BACKSPACE  &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
+&trans  &kp N0            &kp N1  &kp N2  &kp N3   &kp BACKSLASH                     &trans         &kp ENTER  &trans    &trans    &trans     &trans
+                                          &kp DOT  &kp SPACE      &trans     &trans  &trans         &trans
+                                                   &kp SPACE      &kp ENTER  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
