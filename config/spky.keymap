@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-
+#include "includes/key-labels.h"
 #include "includes/settings.dtsi"
 #include "includes/behaviours_homerow_mods.dtsi"
 
