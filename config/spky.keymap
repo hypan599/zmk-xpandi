@@ -36,8 +36,8 @@
 &kp TAB     &kp Q           &kp W           &kp F           &kp P                   &kp B                               &kp J      &kp L                    &kp U           &kp Y           &kp SEMI            &kp MINUS
 &ESC_BKSP   &hm_l LCTRL A   &hm_l LALT R    &hm_l LGUI S    &hm_shift_l LSHFT T     &kp G   &kp LC(LG(Q))  &kp K_MUTE   &kp M      &hm_shift_r RSHFT N      &hm_r RGUI E    &hm_r RALT I    &hm_r RCTRL O       &kp SQT
 &kp LSHIFT  &kp Z           &kp X           &kp C           &kp D                   &kp V                               &kp K      &kp H                   &kp COMMA       &kp DOT         &kp FSLH            &kp RIGHT_ALT
-                                                            &kp LCMD                &none        &mo 5                  &mo 5        &none      &kp RCTRL
-                                                                                    &lt 1 SPACE  &kp ENTER              &lt 4 ENTER  &lt 3 BACKSPACE
+                                                            &lt 1 SPACE             &none        &mo 5                  &mo 5      &none      &lt 3 BACKSPACE
+                                                                                    &kp ENTER    &none                  &none      &lt 4 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -45,12 +45,12 @@
 
         nav_layer {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                        &trans         &trans     &trans         &trans       &trans     &trans
-&trans  &trans     &trans     &trans     &trans     &trans                        &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-&trans  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &trans     &trans  &trans     &trans         &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(V)                     &trans         &kp RG(V)  &kp RG(C)      &kp RG(X)    &kp RG(Z)  &trans
-                                         &trans     &trans     &trans  &trans     &trans         &trans
-                                                    &trans     &trans  &kp ENTER  &kp BACKSPACE
+&trans  &trans     &trans     &trans     &trans     &trans                              &trans         &trans     &trans         &trans       &trans     &trans
+&trans  &trans     &trans     &trans     &trans     &trans                              &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+&trans  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &trans     &trans        &trans     &trans         &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(V)                           &trans         &kp RG(V)  &kp RG(C)      &kp RG(X)    &kp RG(Z)  &trans
+                                         &trans     &trans     &trans        &trans     &trans         &kp BACKSPACE
+                                                    &trans     &trans        &trans     &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -58,12 +58,12 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans     &trans    &trans    &trans          &trans                     &trans     &trans          &trans          &trans        &trans           &trans
-&trans  &trans     &trans    &trans    &trans          &trans                     &trans     &trans          &trans          &trans        &trans           &trans
-&trans  &kp LCTRL  &kp LALT  &kp LCMD  &kp LEFT_SHIFT  &trans  &trans  &trans     &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans     &trans    &trans    &trans          &trans                     &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                       &trans          &trans  &trans  &trans     &trans     &mkp RCLK
-                                                       &trans  &trans  &mkp MCLK  &mkp LCLK
+&trans  &trans     &trans    &trans    &trans          &trans                           &trans     &trans          &trans          &trans        &trans           &trans
+&trans  &trans     &trans    &trans    &trans          &trans                           &trans     &trans          &trans          &trans        &trans           &trans
+&trans  &kp LCTRL  &kp LALT  &kp LCMD  &kp LEFT_SHIFT  &trans  &trans        &trans     &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &trans     &trans    &trans    &trans          &trans                           &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                                       &trans          &trans  &trans        &trans     &trans     &mkp LCLK
+                                                       &trans  &trans        &trans     &mkp RCLK
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -71,12 +71,12 @@
 
         num_layer {
             bindings = <
-&trans  &trans            &trans  &trans  &trans   &trans                            &trans         &trans     &trans    &trans    &trans     &trans
-&trans  &kp MINUS         &kp N7  &kp N8  &kp N9   &kp EQUAL                         &trans         &trans     &trans    &trans    &trans     &trans
-&trans  &kp LEFT_BRACKET  &kp N4  &kp N5  &kp N6   &kp RBKT       &trans     &trans  &kp BACKSPACE  &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
-&trans  &kp N0            &kp N1  &kp N2  &kp N3   &kp BACKSLASH                     &trans         &kp ENTER  &trans    &trans    &trans     &trans
-                                          &kp DOT  &kp SPACE      &trans     &trans  &trans         &trans
-                                                   &kp SPACE      &kp ENTER  &trans  &trans
+&trans  &trans            &trans  &trans  &trans        &trans                                    &trans         &trans     &trans    &trans    &trans     &trans
+&trans  &kp MINUS         &kp N7  &kp N8  &kp N9        &kp EQUAL                                 &trans         &trans     &trans    &trans    &trans     &trans
+&trans  &kp LEFT_BRACKET  &kp N4  &kp N5  &kp N6        &kp RBKT       &trans             &trans  &kp BACKSPACE  &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
+&trans  &kp N0            &kp N1  &kp N2  &kp N3        &kp BACKSLASH                             &trans         &kp ENTER  &trans    &trans    &trans     &trans
+                                          &kp SPACE     &kp SPACE      &trans             &trans  &trans         &trans
+                                                        &kp ENTER      &trans             &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -84,12 +84,12 @@
 
         fn_layer {
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans                        &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &kp F15  &kp F7  &kp F8  &kp F9  &kp F10                       &trans         &trans        &trans        &trans        &trans        &trans
-&trans  &kp F14  &kp F4  &kp F5  &kp F6  &kp F11    &trans     &trans  &kp BACKSPACE  &kp RSHFT     &kp RCMD      &kp RALT      &kp RCTRL     &trans
-&trans  &kp F13  &kp F1  &kp F2  &kp F3  &kp F12                       &trans         &trans        &trans        &trans        &trans        &trans
-                                 &trans  &trans     &trans     &trans  &trans         &trans
-                                         &kp SPACE  &kp ENTER  &trans  &trans
+&trans  &trans   &trans  &trans  &trans         &trans                              &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&trans  &kp F15  &kp F7  &kp F8  &kp F9         &kp F10                             &trans         &trans        &trans        &trans        &trans        &trans
+&trans  &kp F14  &kp F4  &kp F5  &kp F6         &kp F11    &trans           &trans  &kp BACKSPACE  &kp RSHFT     &kp RCMD      &kp RALT      &kp RCTRL     &trans
+&trans  &kp F13  &kp F1  &kp F2  &kp F3         &kp F12                             &trans         &trans        &trans        &trans        &trans        &trans
+                                 &kp SPACE      &trans     &trans           &trans  &trans         &trans
+                                                &kp ENTER  &trans           &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
