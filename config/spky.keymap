@@ -16,6 +16,10 @@
 #define NUML     3
 #define FNL      4
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     behaviors {
         ESC_BKSP: ESC_BKSP {
@@ -35,7 +39,7 @@
 &kp TAB     &kp Q          &kp W         &kp F         &kp P                &kp B                                    &kp J            &kp L                &kp U         &kp Y         &kp SEMI       &kp MINUS
 &ESC_BKSP   &hm_l LCTRL A  &hm_l LALT R  &hm_l LGUI S  &hm_shift_l LSHFT T  &kp G        &kp LC(LG(Q))  &kp K_MUTE   &kp M            &hm_shift_r RSHFT N  &hm_r RGUI E  &hm_r RALT I  &hm_r RCTRL O  &kp SQT
 &kp LSHIFT  &kp Z          &kp X         &kp C         &kp D                &kp V                                    &kp K            &kp H                &kp COMMA     &kp DOT       &kp FSLH       &kp RSHIFT
-                                                       &none                &none        &mo 5          &mo 5        &none            &none
+                                                       &none                &caps_word   &mo 5          &mo 5        &caps_word       &none
                                                                             &lt 1 SPACE  &kp ENTER      &lt 4 ENTER  &lt 3 BACKSPACE
             >;
 
