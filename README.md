@@ -1,1 +1,1 @@
-![image](keymap-drawer\spky.svg)
+![image](keymap-drawer/spky.svg)
