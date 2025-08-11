@@ -11,9 +11,10 @@ parse_config:
     "&bt BT_SEL 3": BT 4
     "&bt BT_SEL 4": BT 5
 
-    "&kp LC(INS)": Copy
-    "&kp LC(X)": Cut
-    "&kp LS(INS)": Paste
+    "&kp LG(C)": Copy
+    "&kp LG(X)": Cut
+    "&kp LG(V)": Paste
+    "&kp LG(Z)": Undo
 
     "&kp LG(LC(LEFT))": Prev Desk
     "&kp LG(LC(RIGHT))": Next Desk
@@ -61,17 +62,20 @@ parse_config:
     RGUI: ⌘
     LSHFT: ⇧
     RSHFT: ⇧
+    LCMD: ⌘
+    RCMD: ⌘
 
-    BSPC: Bspc
+    BSPC: ⌫
     DEL: Del
-    ESC: Esc
+    ESC: ⎋
     RET: ⏎
-    SPACE: Spc
-    TAB: Tab
+    SPACE: ␣
+    TAB: ⇥
 
     PG_UP: PgUp
     PG_DN: PgDn
     INS: Ins
+    INSERT: Ins
     HOME: Home
     END: End
 

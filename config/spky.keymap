@@ -61,7 +61,7 @@
             bindings = <
 &trans  &trans     &trans    &trans    &trans          &trans                     &trans     &trans          &trans          &trans        &trans           &trans
 &trans  &trans     &trans    &trans    &trans          &trans                     &trans     &trans          &trans          &trans        &trans           &trans
-&trans  &kp LCTRL  &kp LALT  &kp LCMD  &kp LEFT_SHIFT  &trans  &trans  &trans     &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &kp LCTRL  &kp LALT  &kp LCMD  &kp LSHFT       &trans  &trans  &trans     &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
 &trans  &trans     &trans    &trans    &trans          &trans                     &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                                        &trans          &trans  &trans  &trans     &trans     &trans
                                                        &trans  &trans  &mkp RCLK  &mkp LCLK
@@ -74,7 +74,7 @@
             bindings = <
 &trans  &trans            &trans  &trans  &trans  &trans                            &trans          &trans     &trans    &trans    &trans     &trans
 &trans  &kp MINUS         &kp N7  &kp N8  &kp N9  &kp EQUAL                         &trans          &trans     &trans    &trans    &trans     &trans
-&trans  &kp LEFT_BRACKET  &kp N4  &kp N5  &kp N6  &kp RBKT       &trans     &trans  &kp BACKSPACE   &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
+&trans  &kp LBKT          &kp N4  &kp N5  &kp N6  &kp RBKT       &trans     &trans  &kp BACKSPACE   &kp RSHFT  &kp RCMD  &kp RALT  &kp RCTRL  &trans
 &trans  &kp N0            &kp N1  &kp N2  &kp N3  &kp BACKSLASH                     &trans          &trans     &trans    &trans    &trans     &trans
                                           &trans  &trans         &trans     &trans  &trans          &trans
                                                   &kp SPACE      &kp ENTER  &trans  &trans
@@ -111,7 +111,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans    &trans         &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans    &trans         &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT  &kp RCMD  &kp RIGHT_ALT  &kp RCTRL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RSHIFT       &kp RCMD  &kp RALT       &kp RCTRL  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans    &trans         &trans     &trans
                                 &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans  &trans
