@@ -13,7 +13,7 @@ layers:
   - '9'
   - '0'
   - '='
-  - Tab
+  - ⇥
   - Q
   - W
   - F
@@ -51,13 +51,13 @@ layers:
   - .
   - /
   - ⌃
-  - LCMD
+  - ⌘
   - Caps Word
   - modifier_l
   - modifier_r
   - Caps Word
   - ⌥
-  - {t: Spc, h: nav}
+  - {t: ␣, h: nav}
   - {t: ENTER, h: mouse}
   - {t: ENTER, h: fn}
   - {t: BACKSPACE, h: num}
@@ -80,7 +80,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - INSERT
+  - Ins
   - Home
   - PAGE DOWN
   - PAGE UP
@@ -101,11 +101,11 @@ layers:
   - →
   - {type: trans}
   - {type: trans}
-  - Gui+Z
-  - Gui+X
-  - Gui+C
+  - Undo
+  - Cut
+  - Copy
   - {type: trans}
-  - Gui+V
+  - Paste
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -150,8 +150,8 @@ layers:
   - {type: trans}
   - ⌃
   - ⌥
-  - LCMD
-  - LEFT SHIFT
+  - ⌘
+  - ⇧
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -209,7 +209,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - '['
+  - {t: '[', right: '{'}
   - '4'
   - '5'
   - '6'
@@ -218,7 +218,7 @@ layers:
   - {type: trans}
   - BACKSPACE
   - ⇧
-  - RCMD
+  - ⌘
   - ⌥
   - ⌃
   - {type: trans}
@@ -240,7 +240,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Spc
+  - ␣
   - ENTER
   - {type: trans}
   - {type: held}
@@ -279,7 +279,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - ⇧
-  - RCMD
+  - ⌘
   - ⌥
   - ⌃
   - {type: trans}
@@ -301,7 +301,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Spc
+  - ␣
   - ENTER
   - {type: held}
   - {type: trans}
@@ -400,9 +400,9 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - RIGHT SHIFT
-  - RCMD
-  - RIGHT ALT
+  - RSHIFT
+  - ⌘
+  - ⌥
   - ⌃
   - {type: trans}
   - {type: trans}
