@@ -216,7 +216,7 @@ layers:
   - {t: ']', right: '}'}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
+  - BACKSPACE
   - ⇧
   - RCMD
   - ⌥
