@@ -136,8 +136,8 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - Mouse ↑
+  - Mouse ↓
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -162,8 +162,8 @@ layers:
   - Mouse →
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - Left Click
+  - Right Click
   - {type: trans}
   - {type: trans}
   - {type: trans}
