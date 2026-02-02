@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: main  # todo: pin to 0.4
       import: app/west.yml
     # - name: zmk
     #   remote: urob
